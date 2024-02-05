@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import ModeSelect from "~/components/ModeSelect";
+import { Close, LibraryAdd, Search } from "@mui/icons-material";
+import AnalyticsIcon from "@mui/icons-material/Analytics";
+import AppsIcon from "@mui/icons-material/Apps";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import {
-  Avatar,
   Badge,
   Box,
   Button,
@@ -10,16 +12,13 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import AppsIcon from "@mui/icons-material/Apps";
-import AnalyticsIcon from "@mui/icons-material/Analytics";
-import Workspaces from "./Menus/Workspaces";
+import { useState } from "react";
+import ModeSelect from "../ModeSelect/ModeSelect";
+import Profile from "./Menus/Profile";
 import Recent from "./Menus/Recent";
 import Starred from "./Menus/Starred";
 import Templates from "./Menus/Templates";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import Profile from "./Menus/Profile";
-import { Close, LibraryAdd, Search } from "@mui/icons-material";
+import Workspaces from "./Menus/Workspaces";
 
 function AppBar() {
   const [searchValue, setSearchValue] = useState("");
