@@ -26,12 +26,12 @@ export default function Profile() {
         <IconButton
           onClick={handleClick}
           size="small"
-          sx={{ padding: 0 }}
+          sx={{ padding: 0, color: "white" }}
           aria-controls={open ? "basic-menu-profile" : undefined}
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
         >
-          <Avatar sx={{ width: 30, height: 30 }} src="" alt="bear" />
+          <Avatar sx={{ width: 36, height: 36 }} src="" alt="bear" />
         </IconButton>
       </Tooltip>
       <Menu
@@ -43,10 +43,10 @@ export default function Profile() {
         }}
       >
         <MenuItem>
-          <Avatar sx={{ width: 28, height: 28, mr: 2 }} /> Profile
+          <Avatar sx={{ width: 34, height: 34, mr: 2 }} /> Profile
         </MenuItem>
         <MenuItem>
-          <Avatar sx={{ width: 28, height: 28, mr: 2 }} /> My account
+          <Avatar sx={{ width: 34, height: 34, mr: 2 }} /> My account
         </MenuItem>
         <Divider />
         <MenuItem>

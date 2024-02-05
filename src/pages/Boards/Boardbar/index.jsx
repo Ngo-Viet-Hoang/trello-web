@@ -1,18 +1,111 @@
-import { Box } from "@mui/material";
-import React from "react";
+import { Bolt, Dashboard, PersonAdd } from "@mui/icons-material";
+import AddToDriveIcon from "@mui/icons-material/AddToDrive";
+import FilterListIcon from "@mui/icons-material/FilterList";
+import VpnLockIcon from "@mui/icons-material/VpnLock";
+import { Avatar, AvatarGroup, Box, Button, Chip, Tooltip } from "@mui/material";
+
+const MENU_STYLES = {
+  color: "white",
+  backgroundColor: "transparent",
+  border: "none",
+  px: "5px",
+  borderRadius: "4px",
+  ".MuiSvgIcon-root": {
+    color: "white",
+  },
+  "&:hover": {
+    bgColor: "primary.50",
+  },
+};
 
 function BoardBar() {
   return (
     <Box
       sx={{
-        backgroundColor: "red",
         width: "100%",
         height: (theme) => theme.trello.boarBarHeight,
         display: "flex",
         alignItems: "center",
+        justifyContent: "space-between",
+        gap: 2,
+        px: 2,
+        overflowX: "auto",
+        borderBottom: "1px solid white",
+        backgroundColor: (theme) =>
+          theme.palette.mode === "dark" ? "#34495e" : "#1976d2",
       }}
     >
-      Broad bar
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        <Chip sx={MENU_STYLES} icon={<Dashboard />} label="Board" clickable />
+        <Chip
+          sx={MENU_STYLES}
+          icon={<VpnLockIcon />}
+          label="Public/Private Workspaces"
+          clickable
+        />
+        <Chip
+          sx={MENU_STYLES}
+          icon={<AddToDriveIcon />}
+          label="Add to Google Drive"
+          clickable
+        />
+        <Chip sx={MENU_STYLES} icon={<Bolt />} label="Automation" clickable />
+        <Chip
+          sx={MENU_STYLES}
+          icon={<FilterListIcon />}
+          label="Filters"
+          clickable
+        />
+      </Box>
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        <Button
+          variant="outlined"
+          startIcon=<PersonAdd />
+          sx={{
+            color: "white",
+            borderColor: "white",
+            "&:hover": {
+              borderColor: "white",
+            },
+          }}
+        >
+          Invite
+        </Button>
+        <AvatarGroup
+          max={4}
+          sx={{
+            gap: "10px",
+            "& .MuiAvatar-root": {
+              width: 34,
+              height: 34,
+              fontSize: 16,
+              border: "none",
+            },
+          }}
+        >
+          <Tooltip title="trello">
+            <Avatar alt="trello" src="/static/images/avatar/1.jpg" />
+          </Tooltip>
+          <Tooltip title="trello">
+            <Avatar alt="trello" src="/static/images/avatar/1.jpg" />
+          </Tooltip>
+          <Tooltip title="trello">
+            <Avatar alt="trello" src="/static/images/avatar/1.jpg" />
+          </Tooltip>
+          <Tooltip title="trello">
+            <Avatar alt="trello" src="/static/images/avatar/1.jpg" />
+          </Tooltip>
+          <Tooltip title="trello">
+            <Avatar alt="trello" src="/static/images/avatar/1.jpg" />
+          </Tooltip>
+          <Tooltip title="trello">
+            <Avatar alt="trello" src="/static/images/avatar/1.jpg" />
+          </Tooltip>
+          <Tooltip title="trello">
+            <Avatar alt="trello" src="/static/images/avatar/1.jpg" />
+          </Tooltip>
+        </AvatarGroup>
+      </Box>
     </Box>
   );
 }

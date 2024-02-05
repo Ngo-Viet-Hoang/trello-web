@@ -23,6 +23,7 @@ export default function Starred() {
     <Box>
       <Button
         id=""
+        sx={{ color: "white" }}
         aria-controls={open ? "basic-menu-starred" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
