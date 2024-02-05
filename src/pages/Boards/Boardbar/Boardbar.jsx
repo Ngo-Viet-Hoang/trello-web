@@ -30,7 +30,6 @@ function BoardBar() {
         gap: 2,
         px: 2,
         overflowX: "auto",
-        borderBottom: "1px solid white",
         backgroundColor: (theme) =>
           theme.palette.mode === "dark" ? "#34495e" : "#1976d2",
       }}
@@ -80,6 +79,11 @@ function BoardBar() {
               height: 34,
               fontSize: 16,
               border: "none",
+              color: "white",
+              cursor: "pointer",
+              "&:first-of_type": {
+                bgcolor: "#a4b0be",
+              },
             },
           }}
         >

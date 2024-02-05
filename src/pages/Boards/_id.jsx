@@ -1,9 +1,8 @@
-import { Box, Container } from "@mui/material";
-import React from "react";
-import AppBar from "~/components/AppBar";
+import { Container } from "@mui/material";
 
-import BoardContent from "./BoardContent";
-import BoardBar from "./Boardbar";
+import AppBar from "~/components/AppBar/Appbar";
+import BoardContent from "./BoardContent/BoardContent";
+import BoardBar from "./Boardbar/Boardbar";
 
 function Board() {
   return (
