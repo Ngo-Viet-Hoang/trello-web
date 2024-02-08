@@ -3,6 +3,7 @@ import AddToDriveIcon from "@mui/icons-material/AddToDrive";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import VpnLockIcon from "@mui/icons-material/VpnLock";
 import { Avatar, AvatarGroup, Box, Button, Chip, Tooltip } from "@mui/material";
+import { capitalizeFirstLetter } from "~/utils/formatter";
 
 const MENU_STYLES = {
   color: "white",
@@ -18,7 +19,7 @@ const MENU_STYLES = {
   },
 };
 
-function BoardBar() {
+function BoardBar({ board }) {
   return (
     <Box
       sx={{
@@ -35,11 +36,16 @@ function BoardBar() {
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-        <Chip sx={MENU_STYLES} icon={<Dashboard />} label="Board" clickable />
+        <Chip
+          sx={MENU_STYLES}
+          icon={<Dashboard />}
+          label={board?.title}
+          clickable
+        />
         <Chip
           sx={MENU_STYLES}
           icon={<VpnLockIcon />}
-          label="Public/Private Workspaces"
+          label={capitalizeFirstLetter(board?.type)}
           clickable
         />
         <Chip
